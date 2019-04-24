@@ -1672,6 +1672,7 @@ void CConnman::ThreadDNSAddressSeed()
             } else {
                 // We now avoid directly using results from DNS Seeds which do not support service bit filtering,
                 // instead using them as a oneshot to get nodes with our desired service bits.
+		LogPrintf("Proceeding for OneShot DNS Seed\n");
                 AddOneShot(seed);
             }
         }
